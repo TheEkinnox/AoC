@@ -1,0 +1,17 @@
+cmake_minimum_required(VERSION 3.20 FATAL_ERROR)
+
+set(USE_FOLDERS ON)
+project(AoC LANGUAGES CXX)
+
+# Setup cpp version
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
+
+include(utility.cmake)
+
+AddYear(2023)
+
+if (MSVC AND DEFINED STARTUP_PROJECT)
+	message(STATUS "Startup project: ${STARTUP_PROJECT}")
+	set_property(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT ${STARTUP_PROJECT})
+endif()

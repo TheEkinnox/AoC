@@ -1,0 +1,5 @@
+include(${CMAKE_SOURCE_DIR}/utility.cmake)
+AddDay(01)
+AddDay(02)
+AddDay(03)
+AddDay(04)
