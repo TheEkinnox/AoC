@@ -1,4 +1,4 @@
-﻿def read_columns( path: str, count: int, separator: str ):
+﻿def read_columns( path: str, count: int, separator: str ) -> list[ list[ int|None ] ]:
     columns = [ ]
 
     for i in range( 0, count ):
@@ -7,7 +7,7 @@
     with open( path, 'r' ) as file:
         for line in file:
             if len( line ) == 0:
-                return
+                continue
 
             tokens = line.split( separator, count - 1 )
 
@@ -15,3 +15,22 @@
                 columns[ i ].append( int( tokens[ i ] ) )
 
     return columns
+
+
+def read_grid( path: str ) -> list[ str ]:
+    grid = [ ]
+    cols = None
+
+    with open( path, "r" ) as file:
+        for line in file:
+            line = line.removesuffix( "\n" )
+
+            if len( line ) == 0:
+                continue
+
+            assert (cols is None or len( line ) == cols)
+            cols = len( line )
+
+            grid.append( line )
+
+    return grid
