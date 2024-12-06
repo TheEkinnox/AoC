@@ -21,4 +21,4 @@ There is also a CMakeLists.txt file for the times I do it in C/C++ but the rest 
 
 ## When do you post answers ?
 
-Usually when I complete them. Might be on the same day, might be a few days later. If you ask because you are stuck on a puzzle, I highly encourage you to come up with your own solution. Try analysing the provided exemples and breaking the problem in smaller steps. I'm sure you can do it ^^
+Usually the day after I complete them. Might be on the same day, might be a few days later. If you ask because you are stuck on a puzzle, I highly encourage you to come up with your own solution. Try analysing the provided exemples and breaking the problem in smaller steps. I'm sure you can do it ^^
