@@ -56,3 +56,8 @@ def read_writable_grid( path: str ) -> list[ list[ str ] ]:
                 grid[ len( grid ) - 1 ].append( char )
 
     return grid
+
+
+def read_bits( val, offset, count ):
+    mask = (1 << count) - 1
+    return (val >> offset) & mask
