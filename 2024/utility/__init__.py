@@ -65,3 +65,13 @@ def read_bits( val, offset, count ):
 
 def get_grid_size( grid ):
     return len( grid ), len( grid[ 0 ] )
+
+
+def get_max( data: list ):
+    max_val = data[ 0 ]
+
+    for i in range( 1, len( data ) ):
+        if data[ i ] is not None and data[ i ] > max_val:
+            max_val = data[ i ]
+
+    return max_val
