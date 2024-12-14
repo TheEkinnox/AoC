@@ -75,3 +75,19 @@ def get_max( data: list ):
             max_val = data[ i ]
 
     return max_val
+
+
+def print_grid( grid, title=None, out=None ):
+    grid_string = f'{title}\n{'=' * len( title )}\n' if title is not None else ''
+
+    for line in range( 0, len( grid ) ):
+        for col in range( 0, len( grid[ line ] ) ):
+            grid_string += grid[ line ][ col ]
+
+        grid_string += '\n'
+
+    if out is None:
+        print( grid_string )
+    else:
+        with open( out, 'a' ) as file:
+            file.write( grid_string )
