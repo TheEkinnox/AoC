@@ -26,7 +26,7 @@ def read_grid( path: str ) -> list[ str ]:
             line = line.removesuffix( "\n" )
 
             if len( line ) == 0:
-                continue
+                break
 
             assert (cols is None or len( line ) == cols)
             cols = len( line )
@@ -45,7 +45,7 @@ def read_writable_grid( path: str ) -> list[ list[ str ] ]:
             line = line.removesuffix( "\n" )
 
             if len( line ) == 0:
-                continue
+                break
 
             assert (cols is None or len( line ) == cols)
             cols = len( line )
